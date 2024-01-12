@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/SMS.css">
+    <script src="../javascript/SMS.js"></script>
+    <title>Consulta SMS</title>
+</head>
+<body>
+    <div class="Card">
+        <div class="Cima">
+          <div class="Esquerda">
+            <div class="Main">
+                <div class="Imagem">
+                    <div class="Container">
+                        <div class="Espaco"></div>
+                        <div class="Testa"></div>
+                        <div class="Cabelo">
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                        </div>
+                        <div class="Sobrancelhas">
+                            <div class="Sobrancelha"></div>
+                            <div class="Sobrancelha"></div>
+                        </div>
+                        <div class="Olhos">
+                            <div class="Olho">
+                                <div class="Pupila" id="olho1">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                            <div class="Olho">
+                                <div class="Pupila" id="olho2">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Boca">
+                            <div class="Labios" id="labios">
+                                <div class="Dentes"></div>
+                                <div class="Garganta"></div>
+                                <div class="Lingua"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="Direita">
+            <div class="DivNro">
+                <input id="InputNro" pattern="\d*" class="InputNro" type="text" maxlength="8" placeholder='Digite o Nro de Telefone do Cliente' />
+            </div>
+            <div class="DivDataInicio">
+                <input id="InputDataInicio" class="InputDataInicio" type="date" placeholder='Digite a Data Inicial' />
+            </div>
+            <div class="DivDataFim">
+                <input id="InputDataFim" class="InputDataFim" type="date" placeholder='Digite a Data Final' />
+            </div>
+          </div>
+        </div>
+        <div class="Meio">
+          <div class="Botoes">
+            <div class="DivVoltar">
+                <button onclick="voltar()" class="ButtonVoltar">Voltar</button>
+              </div>
+              <div class="DivLimpar">
+                <button onclick="limpar()" class="ButtonLimpar">Limpar</button>
+              </div>
+              <div class="DivPesquisar">
+                <button onclick="pesquisar()" onmouseover="mouseOver()" onmouseout="mouseOut()" class="ButtonPesquisar">Pesquisar</button>
+              </div>
+            </div>
+        </div>
+        <div class="Baixo">
+            <table class="TabelaFundo" id='TabelaSMS'>
+                <thead class="Thead">
+                  <tr class="Tr">
+                    <th class="Th">Cliente</th>
+                    <th class="Th">Número do cliente</th>
+                    <th class="Th">Data de Envio</th>
+                    <th class="Th">Mensagem</th>
+                  </tr>
+                </thead>
+                <tbody class="Tbody" id='Tbody'>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

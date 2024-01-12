@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Caixa.css">
+    <script src="../javascript/caixa.js"></script>
+    <title>Clientes Por Caixa</title>
+</head>
+<body>
+    <div class="Card">
+        <div class="Cima">
+          <div class="Esquerda">
+            <div class="Main">
+                <div class="Imagem">
+                    <div class="Container">
+                        <div class="Dobradica1"></div>
+                        <div class="Dobradica2"></div>
+                        <div class="Detalhes">
+                            <div class="Detalhe"></div>
+                            <div class="Detalhe"></div>
+                            <div class="Detalhe"></div>
+                            <div class="Detalhe"></div>
+                        </div>
+                        <div class="Sobrancelhas">
+                            <div class="Sobrancelha"></div>
+                            <div class="Sobrancelha"></div>
+                        </div>
+                        <div class="Olhos">
+                            <div class="Olho">
+                                <div class="Pupila" id="olho1">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                            <div class="Olho">
+                                <div class="Pupila" id="olho2">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Boca">
+                            <div class="Labios" id="labios">
+                                <div class="Dentes"></div>
+                                <div class="Garganta"></div>
+                                <div class="Lingua"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Base">
+                        <div class="Furos">
+                            <div class="Furo"></div>
+                            <div class="Furo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="Direita">
+            <div class="DivCaixa">
+                <input id="InputCaixa" class="InputCaixa" type="text" placeholder='Digite a caixa' />
+              </div>
+          </div>
+        </div>
+        <div class="Meio">
+          <div class="Botoes">
+            <div class="DivVoltar">
+                <button onclick="voltar()" class="ButtonVoltar">Voltar</button>
+              </div>
+              <div class="DivLimpar">
+                <button onclick="limpar()" class="ButtonLimpar">Limpar</button>
+              </div>
+              <div class="DivPesquisar">
+                <button onclick="pesquisar()" onmouseover="mouseOver()" onmouseout="mouseOut()" class="ButtonPesquisar">Pesquisar</button>
+              </div>
+            </div>
+        </div>
+        <div class="Baixo">
+            <table class="TabelaFundo" id='TabelaCaixa'>
+                <thead class="Thead">
+                  <tr class="Tr">
+                    <th class="Th">Código</th>
+                    <th class="Th">Cliente</th>
+                    <th class="Th">Conexão</th>
+                    <th class="Th">Caixa</th>
+                    <th class="Th">Porta</th>
+                  </tr>
+                </thead>
+                <tbody class="Tbody" id='Tbody'>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

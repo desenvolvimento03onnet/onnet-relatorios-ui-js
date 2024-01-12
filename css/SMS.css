@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(270deg, #05b62b, #00bd5b, #00bd84);
+    animation: AnimationName 30s ease infinite;
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.Card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 0;
+    border-radius: 30px;
+    background-color: transparent;
+    box-shadow: 2px 2px 2px 2px;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+}
+.Cima{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0%;
+    width: 100%;
+    height: 60%;
+    flex-direction: row;
+    background-color: transparent;
+}
+.Direita{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    right: 0%;
+    width: 60%;
+    flex-direction: column;
+    background-color: transparent;
+    border-radius: 0px 30px 0px 0px;
+}
+.Esquerda{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 0%;
+    width: 40%;
+    background-color: transparent;
+    border-radius: 30px 0px 30px 0px;
+}
+.Meio{
+  height: 10%;
+  width: 100%;
+}
+.Botoes{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.Baixo{
+    position: relative;
+    left: 0%;
+    height: 30%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0px 0px 30px 30px;
+    overflow-y: scroll;
+}
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: black transparent;
+  }
+
+*::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+  .DivNro{
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.InputNro{
+    display: flex;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 5px white solid;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+}
+.InputNro::placeholder{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+    color: white;
+}
+  .DivDataInicio{
+      align-items: center;
+      justify-content: center;
+      top: 0vh;
+      width: 100%;
+      display: flex;
+      position: relative;
+  }
+  .InputDataInicio{
+      display: flex;
+      width: 70%;
+      padding: 15px;
+      border-radius: 30px;
+      box-sizing: border-box;
+      background-color: transparent;
+      border: 5px white solid;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      text-justify: center;
+  }
+  .InputDataInicio::-webkit-calendar-picker-indicator {
+      filter: invert(100%);
+  }
+  .DivDataFim{
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.InputDataFim{
+    display: flex;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 5px white solid;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+}
+.InputDataFim::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+.DivVoltar{
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.ButtonVoltar{
+    display: flex;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 5px black solid;
+    font-weight: bold;
+    font-size: 140%;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+}
+.ButtonVoltar:hover{
+    background-color: #d62000;
+    color: white;
+    border-color: white;
+}
+.DivLimpar{
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.ButtonLimpar{
+    display: flex;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 5px white solid;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.TabelaFundo{
+    border-collapse: collapse;
+    position: relative;
+    table-layout: fixed;
+    border: 10px 0px 0px 0px black solid;
+    box-shadow: 1px 1px 1px 1px;
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 4%;
+    border-radius: 30px;
+    font-size: 25px;
+    overflow: hidden;
+}
+.Thead{
+    color: black;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    overflow-y: auto;
+    height: 25%;
+    top: 0%;
+    position: sticky;
+    background-color:white;
+}
+.Thead .Th{
+    position: sticky;
+    top: 0px;
+}
+.Tbody{
+    top: 5%;
+    height: 80%;
+    width: 100%;
+    background-color:white;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    border-color: white;
+    color: black;
+    border-width: 2px;
+    
+}
+.DivPesquisar{
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.ButtonPesquisar{
+    display: flex;
+    width: 70%;
+    padding: 15px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 5px white solid;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    text-justify: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.DivCarregar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Carregar{
+    width: 56px;
+   height: 56px;
+   border-radius: 50%;
+   padding: 6.7px;
+   background: conic-gradient(from 135deg at top,black 90deg, #0000 0) 0 calc(50% - 4.5px)/19px 9.5px,
+          radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6.7px),black calc(100% - 5.6px) 99%,#0000) top right/50%  50% content-box content-box,
+          radial-gradient(farthest-side at top,#0000 calc(100% - 6.7px),black calc(100% - 5.6px) 99%,#0000) bottom   /100% 50% content-box content-box;
+   background-repeat: no-repeat;
+   animation: spinner-v8og74 1s infinite linear;
+}
+@keyframes spinner-v8og74 {
+    100% {
+       transform: rotate(1turn);
+    }
+ }
+ .Main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.Imagem{
+    display: flex;
+    height: 80%;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+}
+.Container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    width: 90%;
+    background-color: white;
+    border-radius: 25px 25px 0 25px;
+    flex-direction: column;
+    opacity: 1;
+}
+.Container::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -50px;
+    right: -0.8%;
+    height: 50px;
+    width: 50px;
+    border-top-right-radius: 40px;
+    box-shadow: 0 -25px 0 0 white;
+  }
+  .Container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    left: 0%;
+    z-index: 0;
+    background: linear-gradient(90deg, rgba(225,217,209,1) 0%, rgba(232,232,232,1) 32%, rgba(255,255,255,1) 100%);
+    border-radius: 25px 0 0 25px;
+  }
+
+.Sobrancelhas{
+    display: flex;
+    height: 5%;
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+}
+.Sobrancelha{
+    height: 80%;
+    width: 30%;
+    background-color: #E1D9D1;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 1px 1px 1px 1px;
+}
+.Olhos{
+    display: flex;
+    z-index: 1;
+    height: 40%;
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+}
+.Olho{
+    background-color: white;
+    display: flex;
+    height: 60%;
+    width: 45%;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    left: calc(50% - 10px);
+    top: calc(50% - 15px);
+    overflow: hidden;
+}
+.Pupila{
+    background-color: #006400;
+    height: 60%;
+    width: 60%;
+    border-radius: 50%;
+    position: relative;
+    transform: translate(50%, 50%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.PupilaInterior{
+    position: relative;
+    background-color: black;
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
+}
+.Branco{
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    right: 0%;
+    width: 30%;
+    height: 20%;
+    border-radius: 30px;
+    background-color: white;
+}
+.Boca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    width: 70%;
+}
+.Labios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: #800000;
+    height: 0%;
+    /* border-radius: 0 0 100% 100%; */
+    flex-direction: column;
+    overflow: hidden;
+}
+.Dentes{
+    width: 80%;
+    height: 30%;
+    background-color: white;
+    border-radius: 0 0 5em 5em;
+}
+.Garganta{
+    width: 50%;
+    height: 30%;
+    background-color: #360003; 
+    border-radius: 50% 50% 0 0;
+}
+.Lingua{
+    width: 80%;
+    bottom: 0%;
+    height: 40%;
+    background-color: red;
+    border-radius: 50% 50% 0 0;
+}

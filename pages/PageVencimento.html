@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Vencimento.css">
+    <link rel="stylesheet" href="../css/MultiSelect.css">
+    <script src="../javascript/Vencimento.js"></script>
+    <script src="../javascript/MultiSelect.js"></script>
+    <title>Quantidade de Contratos Por Data de Vencimento</title>
+</head>
+<body>
+    <div class="Card">
+        <div class="Cima">
+          <div class="Esquerda">
+            <div class="Main">
+                <div class="Imagem">
+                    <div class="Container">
+                        <div class="Espaco"></div>
+                        <div class="Testa"></div>
+                        <div class="Cabelo">
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                            <div class="Fio"></div>
+                        </div>
+                        <div class="Sobrancelhas">
+                            <div class="Sobrancelha"></div>
+                            <div class="Sobrancelha"></div>
+                        </div>
+                        <div class="Olhos">
+                            <div class="Olho">
+                                <div class="Pupila" id="olho1">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                            <div class="Olho">
+                                <div class="Pupila" id="olho2">
+                                    <div class="PupilaInterior"></div>
+                                    <div class="Branco"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Boca">
+                            <div class="Labios" id="labios">
+                                <div class="Dentes"></div>
+                                <div class="Garganta"></div>
+                                <div class="Lingua"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="Direita">
+            <div class="DivDatasVencimento">
+                <select class="SelectDatasVencimento" id='ComboBoxDatasVencimento' multiple>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+            <div class="DivDataInicio">
+                <input id="InputDataInicio" class="InputDataInicio" type="date" placeholder='Digite a Data Inicial' />
+            </div>
+            <div class="DivDataFim">
+                <input id="InputDataFim" class="InputDataFim" type="date" placeholder='Digite a Data Final' />
+            </div>
+          </div>
+        </div>
+        <div class="Meio">
+          <div class="Botoes">
+            <div class="DivVoltar">
+                <button onclick="voltar()" class="ButtonVoltar">Voltar</button>
+              </div>
+              <div class="DivLimpar">
+                <button onclick="limpar()" class="ButtonLimpar">Limpar</button>
+              </div>
+              <div class="DivPesquisar">
+                <button onclick="pesquisar()" onmouseover="mouseOver()" onmouseout="mouseOut()" class="ButtonPesquisar">Pesquisar</button>
+              </div>
+            </div>
+        </div>
+        <div class="Baixo">
+            <table class="TabelaFundo" id='TabelaVencimento'>
+                <thead class="Thead">
+                  <tr class="Tr">
+                    <th class="Th">Dia de Vencimento</th>
+                    <th class="Th">Quantidade de Contratos</th>
+                  </tr>
+                </thead>
+                <tbody class="Tbody" id='Tbody'>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <script>
+        new MultiSelectTag('ComboBoxDatasVencimento', {
+            rounded: true,    // default true
+            shadow: true,      // default false
+            placeholder: 'Procurar',  // default Search...
+            tagColor: {
+                textColor: '#327b2c',
+                borderColor: '#92e681',
+                bgColor: '#eaffe6',
+            }
+        });  // id
+
+        //document.querySelectorAll("#ComboBoxDatasVencimento option:checked").length
+    </script>
+</body>
+</html>
