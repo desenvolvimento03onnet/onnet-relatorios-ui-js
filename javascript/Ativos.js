@@ -1,6 +1,39 @@
 document.addEventListener('DOMContentLoaded', function(){
     animacaoOlhos();
 });
+document.addEventListener('keyup', function(event) {
+  if (event.keyCode == 13) {
+    pesquisar();
+  }
+});
+var valida = 0;
+function troca(){
+  if(valida == 0){
+    desativado();
+    valida = 1;
+  }
+  else{
+    ativado();
+    valida = 0;
+  }
+  
+}
+function desativado(){
+  document.getElementById("BotaoB").style.right = "62.5%";
+  document.getElementById("BotaoB").style.transition = "1.2s";
+  document.getElementById("Container").style.backgroundColor = "red";
+  document.getElementById("Container").style.transition = "1.2s";
+  document.getElementsByClassName("Sobrancelha")[0].style.backgroundColor = "black";
+  document.getElementsByClassName("Sobrancelha")[1].style.backgroundColor = "black";
+  document.getElementsByClassName("Sobrancelha")[0].style.transition = "1.2s";
+  document.getElementsByClassName("Sobrancelha")[1].style.transition = "1.2s";
+}
+function ativado(){
+  document.getElementById("BotaoB").style.right = "2%";
+  document.getElementById("Container").style.backgroundColor = "green";
+  document.getElementsByClassName("Sobrancelha")[0].style.backgroundColor = "white";
+  document.getElementsByClassName("Sobrancelha")[1].style.backgroundColor = "white";
+}
 function limpar(){
     document.getElementById("InputDataFim").value = '';
     document.getElementById("Tbody").innerHTML = '';

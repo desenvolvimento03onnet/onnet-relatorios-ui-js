@@ -104,44 +104,30 @@
     justify-content: center;
     height: 60%;
     width: 100%;
-    background-color: #f4e580;
-    border-radius: 25px 25px 0 25px;
+    background-color: green;
+    border-radius: 20% / 50%;
     flex-direction: column;
 }
-.Container::after {
-    content: "";
+.BotaoB{
     position: absolute;
-    background-color: transparent;
-    bottom: -50px;
-    right: -0.8%;
-    height: 50px;
-    width: 50px;
-    border-top-right-radius: 40px;
-    box-shadow: 0 -25px 0 0 #f4e580;    
-  }
-
-  .Container::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 5%;
-    left: 0%;
-    z-index: 0;
-    background-color: #eac12e;
-    border-radius: 25px 0 0 25px;
-  }
-
+    width: 35%;
+    height: 90%;
+    background-color: white;
+    border-radius: 50% / 50%;
+    right: 2%;
+}
 .Sobrancelhas{
     display: flex;
     height: 5%;
-    width: 80%;
+    width: 60%;
     align-items: center;
     justify-content: space-around;
+    z-index: 1;
 }
 .Sobrancelha{
     height: 80%;
     width: 30%;
-    background-color: #eac12e;
+    background-color: green;
     border-radius: 50% 50% 0 0;
     box-shadow: 1px 1px 1px 1px;
 }
@@ -149,7 +135,7 @@
     display: flex;
     z-index: 1;
     height: 40%;
-    width: 80%;
+    width: 60%;
     align-items: center;
     justify-content: space-around;
 }
@@ -168,7 +154,7 @@
     overflow: hidden;
 }
 .Pupila{
-    background-color: #006400;
+    background-color: orange;
     height: 60%;
     width: 60%;
     border-radius: 50%;
@@ -201,7 +187,8 @@
     justify-content: center;
     align-items: center;
     height: 20%;
-    width: 80%;
+    width: 60%;
+    z-index: 1;
 }
 .Labios{
     display: flex;

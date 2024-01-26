@@ -1,3 +1,9 @@
+sessionStorage.removeItem(1);
+sessionStorage.removeItem(2);
+sessionStorage.removeItem(3);
+sessionStorage.removeItem(4);
+sessionStorage.removeItem(5);
+sessionStorage.removeItem(6);
 document.addEventListener('DOMContentLoaded', function(){
     ValidaEmail();
 });

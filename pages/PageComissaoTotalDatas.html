@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ComissaoTotalDatas.css">
+    <script src="../javascript/ComissaoTotalDatas.js"></script>
+    <title>Comissão Total - Datas</title>
+</head>
+<body>
+    <div class="Card">
+        <div class="Cima">
+            <div class="Linha">
+                <div class="Card">
+                    <div class="Cima">
+                        <div class="tituloData01">
+                            <span>Data 01</span>
+                        </div>
+                        <div class="DivSelectData01">
+                            <select class="SelectData01" id="data01" required>
+                                <option value="0" selected disabled>-- Selecione a Data --</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="Baixo">
+                        <div class="tituloData02">
+                            <span>Data 02</span>
+                        </div>
+                        <div class="DivSelectData02">
+                            <select class="SelectData02" id="data02" required>
+                                <option value="0" selected disabled>-- Selecione a Data --</option>
+                                <option value="1">01</option>
+                                <option value="2">02</option>
+                                <option value="3">03</option>
+                                <option value="4">04</option>
+                                <option value="5">05</option>
+                                <option value="6">06</option>
+                                <option value="7">07</option>
+                                <option value="8">08</option>
+                                <option value="9">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Cima">
+                        <div class="tituloValorData01">
+                            <span>Valor Data 01</span>
+                        </div>
+                        <div class="DivInputValorData01">
+                            <input type="number" class="InputValorData01" id="InputValorData01" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" />
+                        </div>
+                    </div>
+                    <div class="Baixo">
+                        <div class="tituloValorData02">
+                            <span>Valor Data 02</span>
+                        </div>
+                        <div class="DivInputValorData02">
+                            <input type="number" class="InputValorData02" id="InputValorData02" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="Card">
+                    <div class="Cima">
+                        <div class="tituloDataInicio">
+                            <span>Valor Data 01</span>
+                        </div>
+                        <div class="DivInputDataInicio">
+                            <input type="date" class="InputDataInicio" id="InputDataInicio" />
+                        </div>
+                    </div>
+                    <div class="Baixo">
+                        <div class="tituloDataFim">
+                            <span>Valor Data 02</span>
+                        </div>
+                        <div class="DivInputDataFim">
+                            <input type="date" class="InputDataFim" id="InputDataFim" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Baixo">
+            <div class="DivVoltar">
+                <button onclick="voltar()" class="ButtonVoltar">Voltar</button>
+            </div>
+            <div class="DivAvancar">
+                <a onclick="validarCampos()" class="BotaoAvancar">Seguinte →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

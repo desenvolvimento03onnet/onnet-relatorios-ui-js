@@ -37,11 +37,11 @@ function ValidaEmail(){
     }else{
         var nome = sessionStorage.getItem(0).substring(0,sessionStorage.getItem(0).indexOf('.'));
         const arr = nome.replaceAll(".", " ").split(" ");
-        console.log(arr);
+        
         for (var i = 0; i < arr.length; i++) {
             arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
         }
         const str2 = arr.join(" ");
-        document.getElementById("Fala2").textContent = str2;
+        document.getElementById("Fala2").textContent = str2.substring(0,nome.indexOf('0')) + " " + nome.substring(nome.indexOf('0'),nome.length);
     }
 }

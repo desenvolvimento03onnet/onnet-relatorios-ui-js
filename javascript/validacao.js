@@ -1,4 +1,11 @@
 sessionStorage.clear();
+
+document.addEventListener('keyup', function(event) {
+    if (event.keyCode == 13) {
+        setarEmail();
+    }
+});
+
 function setarEmail(){
     var email = document.getElementById("InputEmail").value;
     if(email == ''){

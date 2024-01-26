@@ -1,9 +1,83 @@
 document.addEventListener('DOMContentLoaded', function(){
     animacaoOlhos();
 });
+document.addEventListener('keyup', function(event) {
+  if (event.keyCode == 13) {
+    pesquisar();
+  }
+});
+function abrir(){
+  document.getElementById("Fundo").style.transition = '1.2s';
+  document.getElementById("Fundo").style.left = '52.8%';
+  document.getElementById("Container").style.transition = '1.2s';
+  document.getElementById("Container").style.transformStyle = 'transform-style: preserve-3d';
+  document.getElementById("Container").style.transform = 'rotateY(-160deg)';
+  document.getElementById("Container").style.transformOrigin = 'left center';
+  document.getElementById("Container").style.left = '25.3%';
+  document.getElementById("BaseCaixa").style.transition = '1.2s';
+  document.getElementById("BaseCaixa").style.left = '32%';
+}
+function fechar(){
+  document.getElementById("Fundo").style.transition = '1.2s';
+  document.getElementById("Fundo").style.left = '21.3%';
+  document.getElementById("BaseCaixa").style.transition = '1.2s';
+  document.getElementById("BaseCaixa").style.left = '0%';
+  document.getElementById("Container").style.transition = '1.2s'
+  document.getElementById("Container").style.transformStyle = 'transform-style: preserve-3d';
+  document.getElementById("Container").style.transform = 'rotateY(0deg)';
+  document.getElementById("Container").style.left = '0%';
+}
 function limpar(){
     document.getElementById("InputCaixa").value = '';
     document.getElementById("Tbody").innerHTML = '';
+    document.getElementsByClassName("spl1pt1")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt1")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt2")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt2")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt3")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt3")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt4")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt4")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt5")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt5")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt6")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt6")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt7")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt7")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl1pt8")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl1pt8")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt1")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt1")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt2")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt2")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt3")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt3")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt4")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt4")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt5")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt5")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt6")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt6")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt7")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt7")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl2pt8")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl2pt8")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt1")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt1")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt2")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt2")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt3")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt3")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt4")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt4")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt5")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt5")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt6")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt6")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt7")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt7")[1].style.backgroundColor = "#50C878";
+    document.getElementsByClassName("spl3pt8")[0].style.backgroundColor = "green";
+    document.getElementsByClassName("spl3pt8")[1].style.backgroundColor = "#50C878";
 }
 function voltar(){
     if(sessionStorage.getItem(0).includes('@onnetmais.com.br')){
@@ -59,6 +133,7 @@ function LoadCaixa(caixa) {
     fetch(url).then((response) => response.json())
     .then((responseJSON) => {
         tabelaCaixa(responseJSON);
+        PreencheCaixa(responseJSON);
      }).catch((error) => {
         console.error('Erro na solicitação GET: ', error);
         throw error; // Você pode escolher como lidar com erros aqui
@@ -75,3 +150,153 @@ function LoadCaixa(caixa) {
       document.getElementById("Tbody").innerHTML = resultado.toString().replaceAll(",", "");
     }
   }
+function PreencheCaixa(data){
+  document.getElementsByClassName("spl1pt1")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt1")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt2")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt2")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt3")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt3")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt4")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt4")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt5")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt5")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt6")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt6")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt7")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt7")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl1pt8")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl1pt8")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt1")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt1")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt2")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt2")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt3")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt3")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt4")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt4")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt5")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt5")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt6")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt6")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt7")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt7")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl2pt8")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl2pt8")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt1")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt1")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt2")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt2")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt3")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt3")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt4")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt4")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt5")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt5")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt6")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt6")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt7")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt7")[1].style.backgroundColor = "#50C878";
+  document.getElementsByClassName("spl3pt8")[0].style.backgroundColor = "green";
+  document.getElementsByClassName("spl3pt8")[1].style.backgroundColor = "#50C878";
+  for(var i = 0;i<data.length;i++){
+    // console.log('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta);
+    if(document.querySelector(".spl1pt1").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt1")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt1")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt2").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt2")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt2")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt3").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt3")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt3")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt4").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt4")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt4")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt5").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt5")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt5")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt6").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt6")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt6")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt7").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt7")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt7")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt8").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl1pt8")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl1pt8")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt1").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt1")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt1")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt2").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt2")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt2")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt3").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt3")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt3")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt4").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt4")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt4")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt5").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt5")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt5")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl1pt6").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt6")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt6")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt7").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt7")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt7")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl2pt8").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl2pt8")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl2pt8")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt1").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt1")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt1")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt2").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt2")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt2")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt3").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt3")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt3")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt4").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt4")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt4")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt5").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt5")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt5")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt6").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt6")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt6")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt7").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt7")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt7")[1].style.backgroundColor = "red";
+    }
+    if(document.querySelector(".spl3pt8").classList.toString().includes('spl'+data[i].caixa.substring(data[i].caixa.indexOf('/')+1,data[i].caixa.length)+'pt'+data[i].porta)){
+      document.getElementsByClassName("spl3pt8")[0].style.backgroundColor = "red";
+      document.getElementsByClassName("spl3pt8")[1].style.backgroundColor = "red";
+    }
+    
+  }
+}

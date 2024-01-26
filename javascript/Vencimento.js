@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     animacaoOlhos();
 });
+document.addEventListener('keyup', function(event) {
+  if (event.keyCode == 13) {
+    pesquisar();
+  }
+});
 function limpar(){
     document.getElementById("InputDataInicio").value = '';
     document.getElementById("InputDataFim").value = '';

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ComissaoTotalSetores.css">
+    <link rel="stylesheet" href="../css/MultiSelect.css">
+    <script src="../javascript/ComissaoTotalSetores.js"></script>
+    <script src="../javascript/MultiSelect.js"></script>
+    <title>Comissão Total - Setores</title>
+</head>
+<body>
+    <div class="Card">
+        <div class="Meio" id="Meio">
+            <div class="Esquerda">
+                <div class="CardSetor">
+                    <span>SELECIONE O SETOR:</span>
+                    <div class="ComboBoxSetores">
+                        <select class="SelectSetores" id="setores" multiple>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="Direita">
+                <div class="CardCidade">
+                    <span>SELECIONE A CIDADE DO OPERADOR:</span>
+                    <div class="ComboBoxCidades">
+                        <select class="SelectCidades" id="cidades" multiple>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="Baixo">
+            <div class="DivVoltar">
+                <button onclick="voltar()" class="ButtonVoltar">Voltar</button>
+            </div>
+            <div class="DivAvancar">
+                <a onclick="validarCombos()" class="BotaoAvancar">Seguinte →</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    setTimeout(() => {
+        new MultiSelectTag('setores', {
+            rounded: true,    // default true
+            shadow: true,      // default false
+            placeholder: 'Procurar',  // default Search...
+            tagColor: {
+                textColor: '#327b2c',
+                borderColor: '#92e681',
+                bgColor: '#eaffe6',
+            }
+        });
+    }, 200);
+    setTimeout(() => {
+        new MultiSelectTag('cidades', {
+            rounded: true,    // default true
+            shadow: true,      // default false
+            placeholder: 'Procurar',  // default Search...
+            tagColor: {
+                textColor: '#327b2c',
+                borderColor: '#92e681',
+                bgColor: '#eaffe6',
+            }
+        });
+    }, 200);
+    
+</script>
+</html>
