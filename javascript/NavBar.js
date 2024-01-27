@@ -4,6 +4,8 @@ sessionStorage.removeItem(3);
 sessionStorage.removeItem(4);
 sessionStorage.removeItem(5);
 sessionStorage.removeItem(6);
+sessionStorage.removeItem(7);
+sessionStorage.removeItem(8);
 document.addEventListener('DOMContentLoaded', function(){
     ValidaEmail();
 });
