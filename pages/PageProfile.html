@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/SMS.css">
-    <script src="../javascript/SMS.js"></script>
-    <title>Consulta SMS</title>
+    <link rel="stylesheet" href="../css/Profile.css">
+    <script src="../javascript/Profile.js"></script>
+    <title>Lançamentos R-IPCA</title>
 </head>
 <body>
     <div class="Card">
@@ -53,14 +53,8 @@
             </div>
           </div>
           <div class="Direita">
-            <div class="DivNro">
-                <input id="InputNro" pattern="\d*" class="InputNro" type="text" maxlength="9" placeholder='Digite o Nro de Telefone do Cliente' />
-            </div>
-            <div class="DivDataInicio">
-                <input id="InputDataInicio" class="InputDataInicio" type="date" placeholder='Digite a Data Inicial' />
-            </div>
-            <div class="DivDataFim">
-                <input id="InputDataFim" class="InputDataFim" type="date" placeholder='Digite a Data Final' />
+            <div class="DivNomes">
+                <textarea class="TxtNomes" id="TxtNomes" placeholder="Insira os Nomes dos Clientes"></textarea>
             </div>
           </div>
         </div>
@@ -78,13 +72,14 @@
             </div>
         </div>
         <div class="Baixo">
-            <table class="TabelaFundo" id='TabelaSMS'>
+            <table class="TabelaFundo" id='TabelaProfiles'>
                 <thead class="Thead">
                   <tr class="Tr">
+                    <th class="Th">Código</th>
                     <th class="Th">Cliente</th>
-                    <th class="Th">Número do cliente</th>
-                    <th class="Th">Data de Envio</th>
-                    <th class="Th">Mensagem</th>
+                    <th class="Th">Cidade</th>
+                    <th class="Th">Data Último Vencimento</th>
+                    <th class="Th">Profile</th>
                   </tr>
                 </thead>
                 <tbody class="Tbody" id='Tbody'>
