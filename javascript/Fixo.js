@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
-    animacaoOlhos();
-});
 document.addEventListener('keyup', function(event) {
   if (event.keyCode == 13) {
     pesquisar();
@@ -18,42 +15,22 @@ function voltar(){
         window.location.href = "NavBarResumido.html";
       }
 }
-function animacaoOlhos(){
-    const pupila = document.querySelector("#olho1");
-    const pupila2 = document.querySelector("#olho2");
-    
-        document.addEventListener("mousemove", (e) => {
-            let x = e.clientX * 60 / window.innerWidth - 50;
-            let y = e.clientY * 60 / window.innerHeight - 50;
-            
-            pupila.style.left = x + "%";
-            pupila.style.top = y + "%";
-    
-            pupila2.style.left = x + "%";
-            pupila2.style.top = y + "%";
-        });
+function preenche(botao){
+  var fixo = document.getElementById("InputFixo");
+  if(fixo.value.length == 8){
+    alert("Total Atingido, Confira se o número foi digitado corretamente");
+  }else{
+    fixo.value += botao;
   }
-  function mouseOver(){
-    if(document.getElementById("InputFixo").value == ''){
-      document.getElementById("labios").style.height = "50%";
-      document.getElementById("labios").style.transition = "0.2s";
-      document.getElementById("labios").style.borderRadius = "100% 100% 0 0";
-    }else{
-      document.getElementById("labios").style.height = "50%";
-      document.getElementById("labios").style.transition = "0.2s";
-      document.getElementById("labios").style.borderRadius = "0 0 100% 100%";
-    }
-  }
-  function mouseOut(){
-    document.getElementById("labios").style.height = "0%";
-  }
+  
+}
 function pesquisar(){
   var fixo = document.getElementById("InputFixo").value;
   if(fixo == ''){
     alert("Insira o valor em Todos os Campos");
   }else{
      LoadFixo(fixo);
-     document.getElementById("Tbody").innerHTML = '<tr><td colspan="6"><div class="DivCarregar"><div class="Carregar"></div></div></td></tr>';
+     document.getElementById("Tbody").innerHTML = '<tr><td colspan="7"><div class="DivCarregar"><div class="Carregar"></div></div></td></tr>';
   }
 }
 function LoadFixo(fixo) {
@@ -70,11 +47,11 @@ function LoadFixo(fixo) {
 }
 function tabelaFixo(data) {
   if(data.length == 0){
-    document.getElementById("Tbody").innerHTML = '<tr><td colspan="6">Nenhum Contrato Encontrado</td></tr>'
+    document.getElementById("Tbody").innerHTML = '<tr><td colspan="7">Nenhum Contrato Encontrado</td></tr>'
   } else {
     var resultado = [];
     for(var i=0;i<data.length;i++){
-        resultado[i] = "<tr key={Tr"+[i]+"} style=\"height: 10vh; border: 1px black solid; justify-content: space-around;\"><td style=\"justify-content: center; align-items: center; text-align: center; height: 20%; border: 1px black solid;\">"+data[i].codigo+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid;\">"+data[i].cliente+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid;\">"+data[i].contrato+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid;\">"+data[i].cancelado+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid;\">"+data[i].data+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid;\">"+data[i].numero+"</td></tr>";
+        resultado[i] = "<tr key={Tr"+[i]+"} style=\"height: 10vh; border: 1px black solid; justify-content: space-around;\"><td style=\"justify-content: center; align-items: center; text-align: center; height: 20%; border: 1px black solid; word-break: break-all;\">"+data[i].codigo+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].cliente+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].cidade+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].contrato+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].cancelado+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].data+"</td><td style=\"justify-content: center; align-items: center; text-align: center; height: 10%; border: 1px black solid; word-break: break-all;\">"+data[i].numero+"</td></tr>";
     }
     document.getElementById("Tbody").innerHTML = resultado.toString().replaceAll(",", "");
   } 

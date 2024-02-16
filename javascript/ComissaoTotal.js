@@ -30,6 +30,7 @@ function LoadSetores() {
   fetch(url).then((response) => response.json())
     .then((responseJSON) => {
       var setores = sessionStorage.getItem(1).split('%');
+      var frente_loja = false;
       var vendas = [];
       var renovacoes = [];
       var linhaVendas = document.getElementById("linhaVendas");

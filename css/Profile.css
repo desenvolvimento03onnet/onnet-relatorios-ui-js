@@ -112,10 +112,10 @@
     height: 100%;
     width: 80%;
     z-index: 3;
-    background-color: white;
-    border-radius: 25px 25px 25px 25px;
+    background-color: #b2b2ae;
+    border-radius: 50%;
     flex-direction: column;
-    border: 5px black solid; 
+    border: 60px #a18941 solid; 
 }
 .Fundo{
     position: absolute;
@@ -169,7 +169,7 @@
     overflow: hidden;
 }
 .Pupila{
-    background-color: #4B0082;
+    background-color: #a18941;
     height: 60%;
     width: 60%;
     border-radius: 50%;

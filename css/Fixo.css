@@ -40,49 +40,32 @@
     flex-direction: row;
     background-color: transparent;
 }
-.Direita{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    right: 0%;
-    width: 50%;
-    flex-direction: column;
-    background-color: transparent;
-    border-radius: 0px 30px 0px 0px;
-}
 .DivFixo{
+    z-index: 1;
     align-items: center;
     justify-content: center;
-    top: 0vh;
-    width: 100%;
+    top: 3%;
+    right: -2%;
+    width: 70%;
     display: flex;
-    position: relative;
+    position: absolute;
 }
 .InputFixo{
     display: flex;
     width: 70%;
+    height: 100%;
     padding: 15px;
-    border-radius: 30px;
     box-sizing: border-box;
-    background-color: transparent;
-    color: white;
+    background-color: #b1bccd;
+    color: black;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
     text-justify: center;
-    border: 5px white solid;
+    border: 5px black solid;
 }
 .InputFixo::placeholder{
-    color: white;
-}
-.Esquerda{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    left: 0%;
-    width: 50%;
-    background-color: transparent;
-    border-radius: 30px 0px 30px 0px;
+    color: black;
 }
 .Main{
     display: flex;
@@ -103,13 +86,131 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 80%;
+    height: 80%;
+    width: 45%;
     z-index: 3;
-    background-color: white;
-    border-radius: 25px 25px 25px 25px;
+    background-color: #3399ff;
+    border-radius: 10%;
     flex-direction: column;
-    border: 5px black solid; 
+    border: 5px black solid;
+}
+.Container::before{
+    position: absolute;
+    border-radius: 0 42px 42px 0;
+    background: linear-gradient(90deg, #3399ff 0%, #0073e6 32%, #0059b3 100%);
+    content: "";
+    width: 10%;
+    height: 98%;
+    right: 0%;
+}
+.Container::after{
+    position: absolute;
+    border-radius: 42px 0 0 42px;
+    background: linear-gradient(90deg, #0059b3 0%, #0073e6 32%, #3399ff 100%);
+    content: "";
+    width: 10%;
+    height: 98%;
+    left: 0%;
+}
+.Espiral{
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.Linha1{
+    z-index: 1;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    border-top: 10px transparent solid;
+    border-right: 10px #b1bccd solid;
+    border-bottom: 10px #b1bccd solid;
+    border-left: 10px transparent solid;
+    width: 20%;
+    height: 40%;
+    bottom: 0%;
+    left: 1.9%;
+}
+.Linha2{
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    border-top: 10px #b1bccd solid;
+    border-right: 10px transparent solid;
+    border-bottom: 10px transparent solid;
+    border-left: 10px #b1bccd solid;
+    width: 20%;
+    height: 40%;
+    bottom: 0%;
+    left: 1.9%;
+}
+.Linha3{
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    border-top: 10px #b1bccd solid;
+    border-right: 10px #b1bccd solid;
+    border-bottom: 10px #b1bccd solid;
+    border-left: 10px transparent solid;
+    width: 20%;
+    height: 48%;
+    bottom: 0%;
+    left: -2%;
+    rotate: 90deg;
+}
+.Gancho{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    width: 20%;
+    left: 10%;
+    background-color: #3399ff;
+    margin-bottom: 20%;
+    border-radius: 50% / 10%;
+    border: 5px black solid;
+    overflow: hidden;
+}
+.Gancho::before{
+    position: absolute;
+    border-radius: 0 52px 52px 0;
+    background: linear-gradient(90deg, #3399ff 0%, #0073e6 32%, #0059b3 100%);
+    content: "";
+    width: 20%;
+    height: 100%;
+    right: 0%;
+}
+.Digitos{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    right: 13%;
+    height: 60%;
+    bottom: 15%;
+    flex-wrap: wrap;
+}
+.Botao{
+    background-color: #b1bccd;
+    border-radius: 50%;
+    border: 2px black solid;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-text-stroke: 2px black;
+    font-size: 180%;
+}
+.Botao:active{
+    background-color: black;
+    border-color: white;
+    -webkit-text-stroke-color: white;
 }
 .Fundo{
     position: absolute;
@@ -125,108 +226,6 @@
     border-radius: 25px 25px 25px 25px;
     flex-direction: column;
     border: 5px black solid; 
-}
-.Sobrancelhas{
-    display: flex;
-    height: 5%;
-    width: 70%;
-    align-items: center;
-    justify-content: space-around;
-}
-.Sobrancelha{
-    height: 80%;
-    width: 40%;
-    background-color: #cccccc;
-    border-radius: 50% 50% 0 0;
-    box-shadow: 1px 1px 1px 1px;
-}
-.Olhos{
-    display: flex;
-    z-index: 2;
-    height: 40%;
-    width: 70%;
-    align-items: center;
-    justify-content: space-around;
-}
-.Olho{
-    background-color: white;
-    display: flex;
-    height: 60%;
-    width: 40%;
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 1px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    left: calc(50% - 10px);
-    top: calc(50% - 15px);
-    overflow: hidden;
-}
-.Pupila{
-    background-color: #4B0082;
-    height: 60%;
-    width: 60%;
-    border-radius: 50%;
-    position: relative;
-    transform: translate(50%, 50%);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.PupilaInterior{
-    position: relative;
-    background-color: black;
-    height: 50%;
-    width: 50%;
-    border-radius: 50%;
-}
-.Branco{
-    position: absolute;
-    z-index: 2;
-    top: 10%;
-    right: 0%;
-    width: 30%;
-    height: 20%;
-    border-radius: 30px;
-    background-color: white;
-}
-.Boca{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20%;
-    width: 80%;
-}
-.Labios{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    background-color: #800000;
-    height: 0%;
-    /* border-radius: 0 0 100% 100%; */
-    flex-direction: column;
-    overflow: hidden;
-}
-.Dentes{
-    width: 80%;
-    height: 30%;
-    background-color: white;
-    border-radius: 0 0 5em 5em;
-}
-.Garganta{
-    width: 50%;
-    height: 30%;
-    background-color: #360003; 
-    border-radius: 50% 50% 0 0;
-}
-.Lingua{
-    width: 80%;
-    bottom: 0%;
-    height: 40%;
-    background-color: red;
-    border-radius: 50% 50% 0 0;
 }
 .Meio{
     height: 10%;

@@ -10,53 +10,33 @@
 <body>
     <div class="Card">
         <div class="Cima">
-          <div class="Esquerda">
             <div class="Main">
                 <div class="Imagem">
                     <div class="Container">
-                        <div class="Espaco"></div>
-                        <div class="Testa"></div>
-                        <div class="Cabelo">
-                            <div class="Fio"></div>
-                            <div class="Fio"></div>
-                            <div class="Fio"></div>
-                            <div class="Fio"></div>
-                            <div class="Fio"></div>
+                        <div class="DivFixo">
+                            <input id="InputFixo" class="InputFixo" type="number" placeholder='Digite o Nro Fixo' pattern='/^-?\d+\.?\d*$/' onKeyPress='if(this.value.length==8) return false;' />
                         </div>
-                        <div class="Sobrancelhas">
-                            <div class="Sobrancelha"></div>
-                            <div class="Sobrancelha"></div>
+                        <div class="Espiral">
+                          <div class="Linha1"></div>
+                          <div class="Linha2"></div>
+                          <div class="Linha3"></div>
                         </div>
-                        <div class="Olhos">
-                            <div class="Olho">
-                                <div class="Pupila" id="olho1">
-                                    <div class="PupilaInterior"></div>
-                                    <div class="Branco"></div>
-                                </div>
-                            </div>
-                            <div class="Olho">
-                                <div class="Pupila" id="olho2">
-                                    <div class="PupilaInterior"></div>
-                                    <div class="Branco"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Boca">
-                            <div class="Labios" id="labios">
-                                <div class="Dentes"></div>
-                                <div class="Garganta"></div>
-                                <div class="Lingua"></div>
-                            </div>
+                        <div class="Gancho"></div>
+                        <div class="Digitos">
+                            <div class="Botao" onclick="preenche(this.innerText)">1</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">2</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">3</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">4</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">5</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">6</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">7</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">8</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">9</div>
+                            <div class="Botao" onclick="preenche(this.innerText)">0</div>
                         </div>
                     </div>
                 </div>
             </div>
-          </div>
-          <div class="Direita">
-            <div class="DivFixo">
-                <input id="InputFixo" class="InputFixo" type="number" placeholder='Digite o Nro Fixo' pattern='/^-?\d+\.?\d*$/' onKeyPress='if(this.value.length==8) return false;' />
-            </div>
-          </div>
         </div>
         <div class="Meio">
           <div class="Botoes">
@@ -67,7 +47,7 @@
                 <button onclick="limpar()" class="ButtonLimpar">Limpar</button>
               </div>
               <div class="DivPesquisar">
-                <button onclick="pesquisar()" onmouseover="mouseOver()" onmouseout="mouseOut()" class="ButtonPesquisar">Pesquisar</button>
+                <button onclick="pesquisar()" class="ButtonPesquisar">Pesquisar</button>
               </div>
             </div>
         </div>
@@ -77,6 +57,7 @@
                   <tr class="Tr">
                     <th class="Th">Código do Cliente</th>
                     <th class="Th">Cliente</th>
+                    <th class="Th">Cidade</th>
                     <th class="Th">Contrato</th>
                     <th class="Th">Contrato Cancelado?</th>
                     <th class="Th">Data de Cancelamento do Contrato (Caso Tenha)</th>

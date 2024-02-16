@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
-    ValidaEmail();
+    ValidaVazio();
 });
 function mouseOver(){
     document.getElementById("labios").style.height = "50%";
@@ -23,8 +23,21 @@ function animacaoOlhos(){
             pupila2.style.top = y + "%";
         });
   }
-function ValidaEmail(){
+  function ValidaVazio(){
     animacaoOlhos();
+    if(sessionStorage.getItem(0) == null){
+        for(var i=0; i<document.querySelectorAll('.Card').length; i++){
+            document.querySelectorAll('.Card')[i].style.display = 'none';
+        }
+        document.getElementsByTagName("body")[0].style.background = 'red no-repeat';
+        document.getElementById("Fala").textContent = 'VOCÊ NÃO DEVERIA';
+        document.getElementById("Fala2").textContent = 'ESTAR AQUI';
+        document.querySelectorAll(".Pupila")[0].style.borderTop = '50px';
+    }else{
+        ValidaEmail();
+    }
+}
+function ValidaEmail(){
     if(sessionStorage.getItem(0).includes('@onnetmais.com.br')){
         var nome = sessionStorage.getItem(0).substring(0,sessionStorage.getItem(0).indexOf('@'));
         var arr = nome.replaceAll(".", " ").split(" ");
